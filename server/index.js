@@ -13,7 +13,7 @@ var rollbar = new Rollbar({
 rollbar.log('Hello world!')
 
 app.get('/', (req, res)=>{
-    res.sendfile(path.join(__dirname, '/index.html'))
+    res.sendfile(path.join(__dirname, '../index.html'))
 })
 
 app.use(rollbar.errorHandler())
