@@ -14,6 +14,7 @@ rollbar.log('Hello world!')
 
 app.get('/', (req, res)=>{
     res.sendfile(path.join(__dirname, '../index.html'))
+    rollbar.info('html file served successfully.')
 })
 
 app.use(rollbar.errorHandler())
