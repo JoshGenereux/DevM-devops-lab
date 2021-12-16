@@ -12,18 +12,15 @@
     <h1>DevOps Lab</h1>
 
     <div>
-        <div>
-            <form>Enter Your Name</form>
-            <input class="input" type="text">
-            <button class="submit-button">Submit</button>
-        </div>
-        <div class="dad-joke">
-            <form class="dad-joke-form">
-                <button class="submit">Click me for a Dad joke!</button>
-            </form>
-            <div class="dad-joke-answer"></div>
-        </div>
+        <button class="number-button">Click here for a random number fact!</button>
+        <div class="number-response"></div>
     </div>
+
+    <form id="submit">
+        <input id="user-num" type="number">
+        <button class="submit">Submit</button>
+        <div id="submit-response"></div>
+    </form>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>

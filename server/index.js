@@ -14,7 +14,18 @@ rollbar.log('Hello world!')
 
 app.get('/', (req, res)=>{
     res.sendfile(path.join(__dirname, '../index.html'))
-    rollbar.info('html file served successfully.')
+    rollbar.info('html file served')
+})
+
+app.get('/random', (req, res)=>{
+    console.log(res.body)
+    res.status(200).send(res.body)
+})
+
+const userNum = document.getElementById('user-num')
+app.get(`/${userNum.value}`, (req, res)=>{
+    console.log(res.body)
+    res.status(200).send(res.body)
 })
 
 app.use(rollbar.errorHandler())
